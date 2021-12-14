@@ -2,8 +2,8 @@ package com.company;
 
 public class Book {
 
-    private String name;
-    private Author author;
+    private final String name;
+    private final Author author;
     private int year;
 
     public Book(Author author, String name, int year) {
