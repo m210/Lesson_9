@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Book {
 
     private final String name;
@@ -30,10 +32,23 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", author=" + author.toString() +
-                ", year=" + year +
-                '}';
+        return "Book {" +
+                "name = '" + name + '\'' +
+                ", author = " + author.toString() +
+                ", year = " + year +
+                " }";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return year == book.year && name.equals(book.name) && author.equals(book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, author, year);
     }
 }
