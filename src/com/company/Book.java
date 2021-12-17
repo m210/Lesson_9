@@ -32,7 +32,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return name + " by " + author.getFirstName() + " " + author.getLastName() + " was published in " + year;
+        return "\"" + name + "\" by " + author.getFirstName() + " " + author.getLastName() + " was published in " + year;
 
 //        return "Book {" +
 //                "name = '" + name + '\'' +

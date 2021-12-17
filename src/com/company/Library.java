@@ -77,7 +77,9 @@ public class Library {
             if(book == null)
                 continue;
 
-            sb.append("\tКнига " + i++ + ": ");
+            sb.append("\tКнига ");
+            sb.append(i++);
+            sb.append(": ");
             sb.append(book.toString());
             sb.append("\n");
         }
