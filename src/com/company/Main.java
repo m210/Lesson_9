@@ -35,6 +35,8 @@ public class Main {
             lib.printBookInfo("The Stand");
         lib.changeBookPublish("Book2", 9999);
         lib.printAllInfos();
+
+        System.out.println(lib);
     }
 
     public static boolean addBook(Book book) {

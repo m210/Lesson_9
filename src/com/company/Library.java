@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Library {
 
     private final Book[] bookList;
@@ -62,8 +64,24 @@ public class Library {
         if(book == null)
             return;
 
-        Author author = book.getAuthor();
-        System.out.println(book.getName() + " by " + author.getFirstName() + " " + author.getLastName() + " was published in " + book.getYear());
+        System.out.println(book.toString());
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Library: \n");
+
+        int i = 1;
+        for(Book book : bookList) {
+            if(book == null)
+                continue;
+
+            sb.append("\tКнига " + i++ + ": ");
+            sb.append(book.toString());
+            sb.append("\n");
+        }
+
+       return sb.toString();
+    }
 }
